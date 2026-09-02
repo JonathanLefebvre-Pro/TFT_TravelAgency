@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'reset';
+
+// ── CSS custom properties (pour compatibilité éventuelle) ───
+:root {
+  --font-display:   #{$font-display};
+  --font-body:      #{$font-body};
+  --font-mono:      #{$font-mono};
+  --page-pad:       #{$page-pad};
+
+  @include mobile {
+    --page-pad: #{$page-pad-mobile};
+  }
+}
+
+// ── Base ────────────────────────────────────────────────────
+html, body {
+  height: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: $font-body;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

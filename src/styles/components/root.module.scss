@@ -1,0 +1,15 @@
+@use '@styles/variables' as var;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    background-color: var.$color-bg-content;
+
+    flex-grow: 1;
+}
+
+.outlet {
+    padding-left: 20%;
+    padding-right: 20%;
+    flex: 1;
+}

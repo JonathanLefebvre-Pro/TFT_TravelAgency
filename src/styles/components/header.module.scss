@@ -1,0 +1,62 @@
+@use '@styles/variables' as var;
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: var.$color-bg-header;
+
+    min-height: 60px;
+    align-items: center;
+    padding: 1rem;
+
+    padding-left: 20%;
+    padding-right: 20%;
+
+     border-bottom: 1px solid var.$color-border;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: var.$color-text-primary;
+    font-family: var.$font-display;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.headerTitle::before {
+    content:url('logo.svg');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    transform: scale(0.5);
+}
+
+.headerLinks {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: var.$color-btn-txt-primary;
+  padding: 0.5rem 1rem;
+  border: 1px solid var.$color-btn-primary;
+}
+
+.headerLink:hover {
+  color: var.$color-btn-txt-hover;
+  border: 1px solid var.$color-btn-hover;
+  border-radius: 5px;
+  background-color: var.$color-btn-hover;
+}

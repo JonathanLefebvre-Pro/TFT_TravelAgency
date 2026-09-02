@@ -1,0 +1,46 @@
+// ═══════════════════════════════════════════════════════════
+// SUSPTUNE — Variables Sass
+// Source de vérité pour le CSS global.
+// ═══════════════════════════════════════════════════════════
+
+// ── Typographies ───────────────────────────────────────────
+$font-display: 'Barlow Condensed', sans-serif;
+$font-body:    'Barlow', sans-serif;
+$font-mono:    'Share Tech Mono', monospace;
+
+// ── Breakpoints ────────────────────────────────────────────
+$bp-mobile:  480px;
+$bp-tablet:  600px;
+
+// ── Espacements ────────────────────────────────────────────
+$page-pad:        20px;
+$page-pad-mobile: 12px;
+
+// ── Mixins ─────────────────────────────────────────────────
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) { @content; }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{$bp-tablet}) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: #{$bp-mobile}) { @content; }
+}
+
+// Correspond exactement à isMobile: window.innerWidth < 600
+@mixin small {
+  @media (max-width: 599px) { @content; }
+}
+
+// ── Couleurs ───────────────────────────────────────────────
+$color-bg-header:      #10141B;
+$color-bg-content:     #0E1117;
+$color-border: #1B2331;
+$color-text-primary:   #E6E6E6;
+
+$color-btn-txt-primary: #9FB2C8;
+$color-btn-txt-hover: #9ED1FF;
+$color-btn-primary:   rgba(255, 255, 255, 0);
+$color-btn-hover: #20304A;
